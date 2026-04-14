@@ -1,0 +1,79 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`FirstStepsApp > should match snapshot 1`] = `
+<div>
+  <div
+    data-testid="firstStepsApp"
+  >
+    <h1
+      data-testid="firstNameId"
+    >
+      Yair
+    </h1>
+    <h3>
+      Marin
+    </h3>
+    <h1>
+      Activo
+    </h1>
+    <h4>
+      Kingdom Hearts, Super Smash Bros, Final Fantasy
+    </h4>
+    <p
+      style="background-color: green; border-radius: 5px; padding: 10px;"
+    >
+      {"zipCode":12345,"country":"Colombia"}
+    </p>
+    <h1>
+      Carrito de compras
+    </h1>
+    <div
+      data-testid="itemCounterId"
+    />
+    <div
+      data-testid="itemCounterId"
+    />
+    <div
+      data-testid="itemCounterId"
+    />
+  </div>
+</div>
+`;
+
+exports[`FirstStepsApp > should match snapshot 2`] = `
+<div
+  data-testid="firstStepsApp"
+>
+  <h1
+    data-testid="firstNameId"
+  >
+    Yair
+  </h1>
+  <h3>
+    Marin
+  </h3>
+  <h1>
+    Activo
+  </h1>
+  <h4>
+    Kingdom Hearts, Super Smash Bros, Final Fantasy
+  </h4>
+  <p
+    style="background-color: green; border-radius: 5px; padding: 10px;"
+  >
+    {"zipCode":12345,"country":"Colombia"}
+  </p>
+  <h1>
+    Carrito de compras
+  </h1>
+  <div
+    data-testid="itemCounterId"
+  />
+  <div
+    data-testid="itemCounterId"
+  />
+  <div
+    data-testid="itemCounterId"
+  />
+</div>
+`;

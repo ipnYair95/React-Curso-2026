@@ -1,0 +1,26 @@
+import type { INormalizedGif } from "../interfaces/normalized-gif.interface"
+
+
+interface IProps {
+    gifs: INormalizedGif[]
+}
+
+export const GifsList = ({ gifs }: IProps) => {
+    return (
+        <div className="gifs-container">
+
+            {
+                gifs.map((gif) => (
+                    <div key={gif.id} className="gif-card">
+                        <img src={gif.url} alt={gif.title} />
+                        <h3>{gif.title}</h3>
+                        <p>
+                            {gif.width} x {gif.height} (1.5 MB)
+                        </p>
+                    </div>
+                ))
+            }
+
+        </div>
+    )
+}

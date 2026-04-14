@@ -1,0 +1,15 @@
+.item-row {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	margin: 8px 0;
+}
+
+.item-name{
+    flex: 1;
+}
+
+
+.color-red{
+    color: red;
+}
