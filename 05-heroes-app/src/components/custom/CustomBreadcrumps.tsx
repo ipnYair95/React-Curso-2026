@@ -15,7 +15,7 @@ interface IBreadcrumb {
 
 export const CustomBreadcrumps = ({ currentPage, breadcrumbs = [] }: IProps) => {
     return (
-        <Breadcrumb>
+        <Breadcrumb className="mb-4">
             <BreadcrumbList>
 
                 <BreadcrumbItem>
