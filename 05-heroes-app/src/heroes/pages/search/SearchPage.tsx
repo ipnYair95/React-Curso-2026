@@ -4,11 +4,11 @@ import { SearchControls } from './ui/SearchControls';
 import { CustomBreadcrumps } from '@/components/custom/CustomBreadcrumps';
 import { useSearchHero } from '@/heroes/hooks/useSearchHero';
 import { HeroGrid } from '@/heroes/components/HeroGrid';
-import { useSearchParams } from 'react-router';
+import { useSearchParams } from 'react-router'; 
 
 const SearchPage = () => {
 
-    const [searchParams] = useSearchParams();
+    const [searchParams] = useSearchParams(); 
 
     const { data: heroes } = useSearchHero({
         name: searchParams.get('name') || '',

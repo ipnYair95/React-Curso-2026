@@ -20,6 +20,14 @@ export const HeroStats = () => {
 
     }, [favoriteCount, summary]);
 
+    if (!summary) {
+        return (
+            <div>
+                Loading...
+            </div>
+        )
+    }
+
     return (
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
 
@@ -43,8 +51,8 @@ export const HeroStats = () => {
 
             <HeroStatCard title="Favoritos" icon={<Heart className="h-4 w-4 text-muted-foreground" />}>
 
-                <div className="text-2xl font-bold text-red-600">{favoriteCount}</div>
-                <p className="text-xs text-muted-foreground">{percentFavorites}% of total</p>
+                <div className="text-2xl font-bold text-red-600" data-testid="favorite-count">{favoriteCount}</div>
+                <p className="text-xs text-muted-foreground" data-testid="percent-favorites">{percentFavorites}% of total</p>
 
             </HeroStatCard>
 
@@ -54,7 +62,7 @@ export const HeroStats = () => {
                     {summary?.strongestHero.alias}
                 </div>
                 <p className="text-xs text-muted-foreground">
-                    Strength:    {summary?.strongestHero.strength}/10
+                    Strength: {summary?.strongestHero.strength}/10
                 </p>
 
             </HeroStatCard>

@@ -2,13 +2,12 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Slider } from '@/components/ui/slider'
 import { Search, Filter, SortAsc, Grid, Plus } from 'lucide-react'
-import { act, useRef } from 'react'
+import { useRef } from 'react'
 import { useSearchParams } from 'react-router'
 import {
     Accordion,
     AccordionContent,
     AccordionItem,
-    AccordionTrigger,
 } from "@/components/ui/accordion"
 
 export const SearchControls = () => {
@@ -86,7 +85,7 @@ export const SearchControls = () => {
                 </div>
             </div>
 
-            <Accordion type="single" collapsible value={activeAccordion}>
+            <Accordion type="single" collapsible value={activeAccordion} data-testid="accordion">
                 <AccordionItem value="advance-filters">
                     {/* <AccordionTrigger>Filtros avanzados?</AccordionTrigger> */}
                     <AccordionContent>
