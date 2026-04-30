@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   Home,
   Users,
@@ -35,7 +34,13 @@ export const AdminSidebar = ({ isCollapsed, onToggle }: SidebarProps) => {
   const { pathname } = useLocation();
 
   const isActiveRoute = (route: string) => {
+
+    if (pathname.includes('/admin/products') && route === '/admin/products') {
+      return true;
+    }
+
     return route === pathname;
+
   };
 
   return (
