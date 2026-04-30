@@ -31,6 +31,10 @@ export const appRouter = createBrowserRouter([
             {
                 path: 'gender/:gender',
                 element: <GenderPage />
+            },
+            {
+                path: '*',
+                element: <Navigate to="/" />
             }
         ]
     },
@@ -49,6 +53,10 @@ export const appRouter = createBrowserRouter([
             {
                 path: 'register',
                 element: <RegisterPage />
+            },
+            {
+                path: '*',
+                element: <Navigate to="/auth" />
             }
         ]
     },

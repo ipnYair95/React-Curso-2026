@@ -1,7 +1,7 @@
 import { AdminTitle } from '@/admin/components/AdminTitle'
 import { CustomPagination } from '@/components/customs/CustomPagination'
 import { Button } from '@/components/ui/button'
-import { Table, TableBody, TableCaption, TableCell, TableFooter, TableHead, TableHeader, TableRow } from '@/components/ui/table'
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
 import { PlusIcon } from 'lucide-react'
 import { Link } from 'react-router'
 
@@ -16,12 +16,16 @@ export const AdminProductsPage = () => {
                     subTitle='Listado de productos'
                 />
 
-                <Link to="/admin/products/new">
-                    <Button className='mb-10'>
-                        <PlusIcon />
-                        Nuevo producto
-                    </Button>
-                </Link>
+                <div className='flex justify-end mb-10 gap-4'>
+
+                    <Link to="/admin/products/new">
+                        <Button className='mb-10'>
+                            <PlusIcon />
+                            Nuevo producto
+                        </Button>
+                    </Link>
+
+                </div>
 
             </div>
 
