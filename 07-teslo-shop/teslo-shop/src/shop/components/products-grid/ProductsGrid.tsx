@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button"
-import type { Product } from "@/mocks/products.mock"
-import { ChevronLeft, ChevronRight, Filter, Grid, List } from "lucide-react"
+import { Filter, Grid, List } from "lucide-react"
 import { ProductCard } from "../product-card/ProductCard"
 import { FilterSidebar } from "../filter-sidebar/FilterSidebar"
 import { useSearchParams } from "react-router"
 import { useState } from "react"
+import type { Product } from "@/interfaces/product.interface"
 
 interface IProps {
     products: Product[]
@@ -96,11 +96,11 @@ export const ProductsGrid = ({ products }: IProps) => {
                             {products.map((product) => (
                                 <ProductCard
                                     key={product.id}
-                                    id={product.id}
-                                    name={product.name}
+                                    name={product.title}
                                     price={product.price}
-                                    image={product.image}
-                                    category={product.category}
+                                    image={product.images?.[0] ?? 'https://placehold.co/300x300'}
+                                    category={product.gender}
+                                    sizes={product.sizes}
                                 />
                             ))}
                         </div>
