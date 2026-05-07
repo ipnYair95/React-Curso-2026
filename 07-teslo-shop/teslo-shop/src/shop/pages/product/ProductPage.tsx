@@ -1,7 +1,11 @@
-import React from 'react'
+ 
+export const ProductPage = () => { 
 
-export const ProductPage = () => {
     return (
-        <div>ProductPage</div>
+        <>
+
+         
+
+        </>
     )
 }
