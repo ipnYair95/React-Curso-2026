@@ -11,9 +11,10 @@ export interface Product {
     gender: Gender;
     tags: string[];
     images: string[];
-    user: User;
+    category?: string;
+    user?: User;
 }
 
 export type Size = 'XS' | 'S' | 'M' | 'L' | 'XL' | 'XXL';
 
-export type Gender = 'kid' | 'man' | 'women' | 'unisex';
+export type Gender = 'kid' | 'men' | 'women' | 'unisex';
